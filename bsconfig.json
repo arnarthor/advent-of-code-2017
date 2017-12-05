@@ -16,6 +16,7 @@
     "backend": "js",
     "main-module": "Index"
   }],
+  "bsc-flags": ["-bs-super-errors"],
   "suffix": ".bs.js",
   "bs-dependencies": [
       // add your bs-dependencies here 
