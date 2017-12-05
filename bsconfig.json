@@ -1,0 +1,23 @@
+{
+  "name": "adventofcode",
+  "version": "0.1.0",
+  "refmt": 3,
+  "sources": [
+    "src"
+  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "entries": [{
+    "backend": "bytecode",
+    "main-module": "Index"
+  }, {
+    "backend": "js",
+    "main-module": "Index"
+  }],
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+      // add your bs-dependencies here 
+  ]
+}
