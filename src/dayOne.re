@@ -1,19 +1,10 @@
-let explode = (s) => {
-  let rec expl = (i, l) =>
-    if (i < 0) {
-      l
-    } else {
-      expl(i - 1, [s.[i], ...l])
-    };
-  List.map(Char.escaped, expl(String.length(s) - 1, []))
-};
-
 module PartOne = {
   type input = string;
   type answer = int;
   let cases = [("1122", 3), ("1111", 4), ("1234", 0), ("91212121219", 9)];
-  let solve = (str) => {
-    let chars = explode(str);
+  let solve = (str, ans) => {
+    Printf.printf("Expected answer: %d\n", ans);
+    let chars = Utils.explode(str);
     let first = List.hd(chars);
     let total =
       List.fold_left(
@@ -36,8 +27,9 @@ module PartTwo = {
   type input = string;
   type answer = int;
   let cases = [("1212", 6), ("1221", 0), ("123425", 4), ("123123", 12), ("12131415", 4)];
-  let solve = (str) => {
-    let chars = explode(str);
+  let solve = (str, ans) => {
+    Printf.printf("Expected answer: %d\n", ans);
+    let chars = Utils.explode(str);
     let partitionList = () => {
       let (firstWithIndex, secondWithIndex) =
         List.partition(

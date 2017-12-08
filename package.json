@@ -4,7 +4,9 @@
   "scripts": {
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
-    "watch": "bsb -make-world -w"
+    "watch": "bsb -make-world -w",
+    "run": "nodemon --exec \"./lib/bs/bytecode/index.byte\" --watch ./lib/bs/bytecode/ -e byte"
+
   },
   "keywords": [
     "BuckleScript"
